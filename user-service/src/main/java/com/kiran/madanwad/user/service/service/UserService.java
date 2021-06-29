@@ -32,10 +32,6 @@ public class UserService {
     @Qualifier("departmentcb")
     private CircuitBreaker circuitBreaker;
 
-//    @Autowired
-//    @Qualifier("departmentCBCustomConfiguration")
-//    private Customizer<Resilience4JCircuitBreakerFactory> departmentCBCustomConfiguration;
-
     public User saveUser(@RequestBody User user) {
         log.info("inside saveUser service");
         return userReposotiory.save(user);
